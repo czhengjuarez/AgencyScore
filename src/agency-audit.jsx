@@ -228,25 +228,25 @@ const getOverall = (total, maxScore) => {
   const pct = total / maxScore;
   if (pct >= 0.80)
     return {
-      title: "High agency",
+      title: "Architect",
       framework: "Work-life choice",
       message:
-        "Your conditions support choosing how deep to go. You have meaningful decision-making power, ownership over outcomes, and control over your time. If you're still burning out, the issue isn't agency. It's boundaries you're choosing not to set.",
+        "You shape decisions and outcomes. You have meaningful decision-making power, ownership over results, and real control over your time and growth. If you're still burning out, the issue isn't agency — it's boundaries you're choosing not to set.",
       color: "var(--of-fg-success)",
     };
   if (pct >= 0.55)
     return {
-      title: "Mixed agency",
+      title: "Builder",
       framework: "Hybrid approach",
       message:
-        "You have partial conditions for choice. Some dimensions give you real ownership, others constrain you. Identify your lowest-scoring dimensions. Some are within your control (skill agency). Others require organizational change (decision agency). Focus on what you can shift first.",
+        "You have agency in some areas but encounter structural constraints in others. Identify your lowest-scoring dimensions — some you can shift yourself (skill, impact), others require organizational change (decision, ownership). Start with what's in your control.",
       color: "var(--of-fg-warning)",
     };
   return {
-    title: "Low agency",
+    title: "Executor",
     framework: "Work-life balance",
     message:
-      "Work-life balance is the right framework for you right now. Protect yourself. Set bounds. Don't feel guilty about clocking out at 5pm. You don't have the conditions for work-life choice, and pretending you do leads to burnout without ownership.",
+      "Most decisions are made for you right now. Work-life balance is the right framework — protect yourself, set boundaries, and don't feel guilty about clocking out. Focus on selective ownership where you can claim it. You don't have the conditions for work-life choice yet, and pretending otherwise leads to burnout without control.",
     color: "var(--of-fg-danger)",
   };
 };
@@ -888,7 +888,7 @@ export default function AgencyAudit() {
                     />
                     {/* Mixed threshold tick */}
                     <div
-                      title={`Mixed agency threshold: ${mixedThreshold} pts`}
+                      title={`Builder threshold: ${mixedThreshold} pts`}
                       style={{
                         position: "absolute", top: -2, bottom: -2,
                         left: `${mixedPct}%`, width: 2,
@@ -899,7 +899,7 @@ export default function AgencyAudit() {
                     />
                     {/* High threshold tick */}
                     <div
-                      title={`High agency threshold: ${highThreshold} pts`}
+                      title={`Architect threshold: ${highThreshold} pts`}
                       style={{
                         position: "absolute", top: -2, bottom: -2,
                         left: `${highPct}%`, width: 2,
@@ -925,9 +925,9 @@ export default function AgencyAudit() {
                       Thresholds at your settings
                     </div>
                     {[
-                      { label: "High agency",  framework: "Work-life choice",  pts: highThreshold,  color: "var(--of-fg-success)", achieved: total >= highThreshold },
-                      { label: "Mixed agency", framework: "Hybrid approach",   pts: mixedThreshold, color: "var(--of-fg-warning)", achieved: total >= mixedThreshold && total < highThreshold },
-                      { label: "Low agency",   framework: "Work-life balance", pts: null,           color: "var(--of-fg-danger)",  achieved: total < mixedThreshold },
+                      { label: "Architect", framework: "Work-life choice",  pts: highThreshold,  color: "var(--of-fg-success)", achieved: total >= highThreshold },
+                      { label: "Builder",   framework: "Hybrid approach",   pts: mixedThreshold, color: "var(--of-fg-warning)", achieved: total >= mixedThreshold && total < highThreshold },
+                      { label: "Executor",  framework: "Work-life balance", pts: null,           color: "var(--of-fg-danger)",  achieved: total < mixedThreshold },
                     ].map(({ label, framework, pts, color, achieved }) => (
                       <div
                         key={label}

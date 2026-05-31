@@ -16,11 +16,11 @@ This audit operationalizes that question. It treats agency not as a binary but a
 
 The practical output is:
 
-| Score | Framework | Meaning |
-|---|---|---|
-| ≥ 80% of max | **Work-life choice** | You have conditions to choose how deep you go |
-| 55–79% | **Hybrid** | You have partial conditions; focus on what you can shift |
-| < 55% | **Work-life balance** | Protect yourself. The conditions aren't there yet |
+| Score | Archetype | Framework | Meaning |
+|---|---|---|---|
+| ≥ 80% of max | **Architect** | Work-life choice | You shape decisions and outcomes |
+| 55–79% | **Builder** | Hybrid approach | Agency in some areas, structural constraints in others |
+| < 55% | **Executor** | Work-life balance | Most decisions are made for you; protect yourself first |
 
 Trying to operate in "choice" mode without the underlying agency leads to burnout without ownership — effort without control.
 
