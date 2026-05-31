@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import "./keel-tokens.css";
+@import "./keel-components.css";
+
+/* Option button base — selected state handled inline with dimension color vars */
+.audit-option {
+  display: block;
+  width: 100%;
+  background: var(--of-bg-elevated);
+  border: 1px solid var(--of-border-line);
+  border-radius: var(--of-radius-md);
+  padding: 14px 18px;
+  font-family: var(--of-font-sans);
+  font-size: var(--of-text-sm);
+  line-height: var(--of-leading-normal);
+  color: var(--of-fg-default);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color var(--of-dur-fast) var(--of-ease-out),
+              background var(--of-dur-fast) var(--of-ease-out),
+              opacity var(--of-dur-fast);
+}
+.audit-option:disabled {
+  cursor: default;
+}
+.audit-option:not(:disabled):hover {
+  border-color: var(--of-border-strong);
+  background: var(--of-bg-recessed);
+}
+
+.audit-divider {
+  border: none;
+  border-top: 1px solid var(--of-border-subtle);
+  margin: 0;
+}
+
+.audit-control-card {
+  background: var(--of-bg-elevated);
+  border: 1px solid var(--of-border-line);
+  border-radius: var(--of-radius-md);
+  padding: 16px 18px;
+}
